@@ -109,6 +109,12 @@ export class CodeFlow {
 			body.state = Buffer.from(JSON.stringify(body)).toString('base64');
 		}
 
+		console.log('CodeFlow getToken', {
+			url: options.accessTokenUri,
+			headers,
+			body,
+		})
+
 		const requestOptions = getRequestOptions(
 			{
 				url: options.accessTokenUri,

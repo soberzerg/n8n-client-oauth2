@@ -15,6 +15,7 @@ export interface OAuth2CredentialData {
 	oauthTokenData?: {
 		access_token: string;
 		refresh_token?: string;
+		device_id?: string;
 	};
 }
 
