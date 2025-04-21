@@ -95,6 +95,11 @@ class CodeFlow {
             body.client_id = options.clientId;
             body.state = Buffer.from(JSON.stringify(body)).toString('base64');
         }
+        console.log('CodeFlow getToken', {
+            url: options.accessTokenUri,
+            headers,
+            body,
+        });
         const requestOptions = (0, utils_1.getRequestOptions)({
             url: options.accessTokenUri,
             method: 'POST',
