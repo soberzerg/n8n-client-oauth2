@@ -109,11 +109,11 @@ export class CodeFlow {
 			body.state = Buffer.from(JSON.stringify(body)).toString('base64');
 		}
 
-		console.log('CodeFlow getToken', {
+		throw new TypeError('CodeFlow getToken: ' + JSON.stringify({
 			url: options.accessTokenUri,
 			headers,
 			body,
-		})
+		}));
 
 		const requestOptions = getRequestOptions(
 			{
